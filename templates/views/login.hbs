@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log In</title>
+    <script src="js/svg-inject.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="min-h-screen flex flex-col justify-between">
+    {{>navbar}}
+    <div class="my-10 mx-32">
+        <p class="mb-10 text-center text-5xl font-bold">Login Now!</p>
+        <hr class="my-10 mx-auto w-1/2 border border-slate-400">
+        <form action="/login" method="POST" class="text-xl flex flex-col gap-3">
+            <input type="email" name="email" id="email" class="mx-auto mb-5 py-3 px-5 w-1/2 rounded-lg border-2 border-gray-300 transition-all hover:border-gray-400 focus:outline-none focus:border-blue-700 focus-visible:outline-0" placeholder="Email Address" required>
+            <input type="password" name="pass" id="pass" class="mx-auto mb-5 py-3 px-5 w-1/2 rounded-lg border-2 border-gray-300 transition-all hover:border-gray-400 focus:outline-none focus:border-blue-700 focus-visible:outline-0" placeholder="Password" required>
+            <input type="submit" value="Log In" class="mx-auto p-3 w-1/2 rounded-full border-4 border-blue-700 text-xl font-semibold text-white bg-blue-700 cursor-pointer transition-all hover:text-blue-700 hover:bg-white">
+        </form>
+    </div>
+    {{>footer}}
+</body>
+</html>

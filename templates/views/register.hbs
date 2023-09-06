@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <script src="js/svg-inject.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="min-h-screen flex flex-col justify-between">
+    {{>navbar}}
+    <div class="my-10 mx-32">
+        <p class="my-10 text-center text-5xl font-bold">Register Now!</p>
+        <hr class="my-10 mx-auto w-1/2 border border-slate-400">
+        <form action="/register" method="POST" class="text-xl flex flex-col gap-3">
+            <div class="mb-5 flex justify-between items-center gap-10">
+                <input type="text" name="fname" id="fname" class="py-3 px-5 w-full rounded-lg border-2 border-gray-300 transition-all hover:border-gray-400 focus:outline-none focus:border-blue-700 focus-visible:outline-0" placeholder="First Name" required>
+                <input type="text" name="lname" id="lname" class="py-3 px-5 w-full rounded-lg border-2 border-gray-300 transition-all hover:border-gray-400 focus:outline-none focus:border-blue-700 focus-visible:outline-0" placeholder="Last Name" required>
+            </div>
+            <div class="mb-5 flex justify-between items-center gap-10">
+                <input type="number" name="age" id="age" min="10" max="100" class="py-3 px-5 w-1/2 rounded-lg border-2 border-gray-300 transition-all hover:border-gray-400 focus:outline-none focus:border-blue-700 focus-visible:outline-0" placeholder="Age" required>
+                <div class="w-1/2 flex justify-between items-center gap-3">
+                    <div>
+                        <input type="radio" name="gender" value="male" id="male" class="transition-all focus:outline-0 focus-visible:outline-none focus-visible:outline-0" checked>
+                        <label for="male">Male</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="gender" value="female" id="female" class="transition-all focus:outline-0 focus-visible:outline-none focus-visible:outline-0">
+                        <label for="female">Female</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="gender" value="transgender" id="transgender" class="transition-all focus:outline-0 focus-visible:outline-none focus-visible:outline-0">
+                        <label for="transgender">Transgender</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="gender" value="prefer not to say" id="pnts" class="transition-all focus:outline-0 focus-visible:outline-none focus-visible:outline-0">
+                        <label for="pnts">Prefer Not To Say</label>
+                    </div>
+                </div>
+            </div>
+            <div class="mb-5 flex justify-between items-center gap-10">
+                <input type="tel" name="phone" id="phone" class="py-3 px-5 w-full rounded-lg border-2 border-gray-300 transition-all hover:border-gray-400 focus:outline-none focus:border-blue-700 focus-visible:outline-0" placeholder="Phone Number" required>
+                <input type="email" name="email" id="email" class="py-3 px-5 w-full rounded-lg border-2 border-gray-300 transition-all hover:border-gray-400 focus:outline-none focus:border-blue-700 focus-visible:outline-0" placeholder="Email Address" required>
+            </div>
+            <div class="mb-5 flex justify-between items-center gap-10">
+                <input type="password" name="pass" id="pass" class="py-3 px-5 w-full rounded-lg border-2 border-gray-300 transition-all hover:border-gray-400 focus:outline-none focus:border-blue-700 focus-visible:outline-0" placeholder="Password" required>
+                <input type="password" name="cpass" id="cpass" class="py-3 px-5 w-full rounded-lg border-2 border-gray-300 transition-all hover:border-gray-400 focus:outline-none focus:border-blue-700 focus-visible:outline-0" placeholder="Confirm Password" required>
+            </div>
+            <input type="submit" value="Sign Up" class="mx-auto p-3 w-1/2 rounded-full border-4 border-blue-700 text-xl font-semibold text-white bg-blue-700 cursor-pointer transition-all hover:text-blue-700 hover:bg-white">
+        </form>
+    </div>
+    {{>footer}}
+</body>
+</html>
