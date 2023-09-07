@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "A login and registration form with a simple front-end focusing on the back-end functionalities.",
   "main": "index.js",
-  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -16,7 +15,7 @@
     "validation"
   ],
   "author": "Vijay",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "cookie-parser": "^1.4.6",
