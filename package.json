@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "A login and registration form with a simple front-end focusing on the back-end functionalities.",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
